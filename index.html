@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ff4d88" />
+  <title>💕💕💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" as="image" href="dudu-flow-kiss-cute-dudu.gif" />
+  <link rel="preload" as="image" href="cuddle-cute.gif" />
+  <link rel="preload" as="image" href="bubu-dudu.gif" />
+  <link rel="preload" as="image" href="bubu-dudu.gif" />
+</head>
+<body>
+  <div id="hearts" aria-hidden="true">
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+    <div class="bg-orb orb-c" aria-hidden="true"></div>
+  </div>
+
+  <main class="app">
+    <section id="step-landing" class="step active">
+      <div class="card">
+        <div class="card-inner">
+          <p id="no-message" class="no-message" aria-live="polite"></p>
+          <div class="emoji-pop" aria-hidden="true">😊</div>
+          <h1 class="script-title">Will you be mine? 💗</h1>
+          <p class="subtitle">I really like you a lot, so I made this little surprise for you, love.</p>
+          <div class="btn-row">
+            <button id="btn-yes" class="btn btn-yes" type="button">YES PLEASE! 💖</button>
+            <button id="btn-no" class="btn btn-no" type="button">nah 😅</button>
+          </div>
+          <p class="hint">P.S. one button still works… try again, sweetheart 😌</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="step-date" class="step">
+      <div class="card">
+        <div class="card-inner">
+          <div class="step-tag">Step 1 of 4</div>
+          <h2 class="title">What date should we do? 💘</h2>
+          <p class="subtitle">Pili ka lang, babe, I’m excited either way.</p>
+          <div class="options" id="date-options"></div>
+          <button class="btn btn-primary" id="date-next" type="button" disabled>Continue →</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="step-calendar" class="step">
+      <div class="card">
+        <div class="card-inner">
+          <div class="step-tag">Step 2 of 4</div>
+          <h2 class="title">Perfect! What day works for you? 📅</h2>
+          <p class="subtitle">Let’s lock in the date, pretty please… I’ll be smiling all day.</p>
+          <div class="gif-show kiss-gif">
+            <img src="dudu-flow-kiss-cute-dudu.gif" alt="Cute kiss GIF" />
+          </div>
+          <input type="date" id="date-picker" class="date-input" />
+          <button class="btn btn-primary" id="cal-next" type="button" disabled>Continue →</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="step-time" class="step">
+      <div class="card">
+        <div class="card-inner">
+          <div class="step-tag">Step 3 of 4</div>
+          <h2 class="title">What time should I pick you up? ⏰</h2>
+          <p class="subtitle">Dinner, sunset, or late-night snacks — whichever you want, love.</p>
+          <div class="gif-show kiss-gif">
+            <img src="dudu-flow-kiss-cute-dudu.gif" alt="Cute kiss GIF" />
+          </div>
+          <input type="time" id="time-picker" class="time-input" />
+          <div class="btn-row">
+            <button class="btn btn-ghost" id="time-back" type="button">← Back</button>
+            <button class="btn btn-primary" id="time-next" type="button" disabled>Continue →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="step-food" class="step">
+      <div class="card">
+        <div class="card-inner">
+          <div class="step-tag">Step 4 of 4</div>
+          <h2 class="title">And what should we eat? 🍽️</h2>
+          <p class="subtitle">Choose carefully… your taste buds are in charge, and I’m already hungry for us.</p>
+          <div class="options" id="food-options"></div>
+          <div class="btn-row">
+            <button class="btn btn-ghost" id="food-back" type="button">← Back</button>
+            <button class="btn btn-primary" id="food-next" type="button" disabled>Let’s do this 💕</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="step-result" class="step">
+      <div class="card">
+        <div class="card-inner">
+          <div class="emoji-pop" aria-hidden="true">🥳</div>
+          <h1 class="script-title">Yayyy! I can’t wait! 💫</h1>
+          <p class="subtitle">Here’s our cute little plan… I’m already excited for it.</p>
+          <div class="summary">
+            <div class="summary-item">
+              <span class="summary-label">Our date</span>
+              <span class="summary-value" id="result-date">—</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">The day</span>
+              <span class="summary-value" id="result-day">—</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">The time</span>
+              <span class="summary-value" id="result-time">—</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Our food</span>
+              <span class="summary-value" id="result-food">—</span>
+            </div>
+          </div>
+          <div class="gif-show hug-gif">
+            <img src="cuddle-cute.gif" alt="Cute hug GIF" />
+          </div>
+          <div class="thank-you">
+            <p>Thank you for saying yes,</p>
+            <p class="big-love">I love you so much, my love ❤️</p>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-primary" id="save-plan" type="button">Save my plan 💾</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main> 
+
+  <script src="script.js"></script> 
+</body> 
+</html> 
